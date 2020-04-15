@@ -1,0 +1,233 @@
+:root {
+  --linearG:hsl(236, 72%, 79%), hsl(237, 63%, 64%);
+}
+
+body {
+  margin : 0;
+  height : 100vh;
+  width : 100%;
+  position : relative;
+  background-color : hsl(240, 78%, 98%);
+  font-family: 'Montserrat', sans-serif;
+  color : hsl(233, 13%, 49%);
+
+}
+.bg-top {
+  position: absolute;
+  right : 0px;
+  z-index: -1;
+  top : -35px;
+  width : 300px;
+
+}
+
+.bg-bottom {
+  position : absolute;
+  z-index: -1;
+  bottom : 0px;
+  margin: 0;
+
+}
+ /* Header */
+ .header {
+
+
+ }
+ .pricing-header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+.toggle-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width:40px;
+    height:20px;
+    background-image: linear-gradient(90deg, var(--linearG));
+    -webkit-appearance: none;
+    border-radius:20px;
+    cursor: pointer;
+}
+input[type="checkbox"]::before{
+    position:absolute;
+    top: 0;
+    left:0;
+    content: '';
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background-color: white;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+input:checked[type="checkbox"]::before{
+
+    left:20px;
+}
+input[type="checkbox"]::after{
+    position:absolute;
+    top: 0;
+    left:0;
+    content: '';
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+input:checked[type="checkbox"]::after{
+    background-color: white;
+    left:20px;
+}
+
+/* Main Container */
+.container-fluid {
+  position : absolute;
+  margin-left : 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.basic {
+  border :1px solid;
+  display: inline-block;
+  margin : 0;
+  padding : 20px;
+  border-radius : 10px;
+  border : none;
+  background-color: white;
+
+
+
+}
+.professional {
+  border :1px solid;
+  display: inline-block;
+  margin : 0;
+  padding : 40px 20px;
+  background-image :linear-gradient(180deg,var(--linearG));
+  position: relative;
+  z-index: 1;
+  color : white;
+  border-radius : 10px;
+  border : none;
+
+}
+.professional hr {
+  color : white;
+}
+.master {
+  border :1px solid;
+  display: inline-block;
+  margin : 0;
+  padding : 20px;
+  border-radius : 10px;
+  border : none;
+  background-color: white;
+
+
+}
+
+.annually-price0, .annually-price1, .annually-price2  {
+  margin : 0 30px;
+  display: block;
+}
+
+.monthly-price0, .monthly-price1, .monthly-price2 {
+  display: none;
+  margin: 0 50px;
+}
+
+.price {
+  font-size: 3.5em;
+}
+
+h2 {
+  margin-bottom : 10px;
+}
+
+h3 {
+  margin : 0;
+}
+
+hr {
+  width : 100%;
+}
+
+.button {
+  padding : 10px 60px;
+  border-radius: 10px;
+  border : none;
+  margin : 10px 30px;
+  cursor: pointer;
+  background-image : linear-gradient(180deg,var(--linearG));
+  font-family: 'Montserrat', sans-serif;
+  color : white;
+
+
+}
+.button-professional {
+  padding : 10px 60px;
+  border-radius: 10px;
+  border : none;
+  margin : 10px 30px;
+  margin-bottom : 0;
+  cursor: pointer;
+  background-color : white;
+  font-family: 'Montserrat', sans-serif;
+   color: hsl(228, 45%, 44%);
+
+}
+.attribution {
+   font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom : 10px;
+    left : 500px;
+   }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 991px){
+  .container-fluid {
+    position : absolute;
+    margin-left : 40px;
+    margin: bottom : 20px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  }
+  .basic, .professional, .master {
+    margin-bottom : 20px;
+  }
+  .pricing-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ .toggle-header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+ }
+
+ .attribution {
+   display: none;
+
+ }
+
+  .bg-bottom {
+    display: none;
+  }
+}

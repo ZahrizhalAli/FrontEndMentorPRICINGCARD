@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="js/index.js"></script>
+  <script type="text/javascript">
+  function showPrice() {
+      var checkbox = document.getElementById("checkbox");
+      for(let i=0; i<3; i++) {
+          var monthly = document.getElementById("monthly-price" + i);
+          console.log(monthly);
+              if(checkbox.checked === true) {
+                  monthly.style.display = "block";
+
+              }else{
+                  monthly.style.display = "none";
+              }
+      }
+      for(let i=0; i<3; i++) {
+          var annually = document.getElementById("annually-price" + i);
+          console.log(annually);
+              if(checkbox.checked === true) {
+                  annually.style.display = "none";
+              }else{
+                  annually.style.display = "block";
+              }
+          }
+  }
+
+  </script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+
+
+  <img class="bg-top" src="images/bg-top.svg" alt="">
+  <img class="bg-bottom" src="images/bg-bottom.svg" alt="">
+  <div class="header">
+    <div class="pricing-header">
+      <h2>Our Pricing</h2>
+    </div>
+
+    <div class="toggle-header">
+      <p>Annually</p>
+      <input type="checkbox" name="checkbox" class="checkbox" id="checkbox" aria-label="true" onclick="showPrice()">
+      <p>Monthly</p>
+    </div>
+
+  </div>
+
+  <div class="container-fluid">
+    <div class="basic">
+      <h3>Basic</h3><br>
+      <span class="price monthly-price0" id="monthly-price0">&dollar;19.99</span><br>
+      <span class="price annually-price0" id="annually-price0">&dollar;199.99</span><br>
+      <hr noshade>
+      <p>500 GB Storage</p>
+      <hr noshade>
+      <p>2 Users Allowed</p>
+      <hr noshade>
+      <p>Send up to 3 GB</p>
+      <hr noshade>
+      <button class="button" type="button" name="button">Learn More</button>
+    </div>
+
+    <div class="professional">
+      <h3>Professional</h3><br>
+      <span class="price monthly-price1" id="monthly-price1">&dollar;24.99</span><br>
+      <span class="price annually-price1" id="annually-price1">&dollar;249.99</span><br>
+      <hr noshade>
+      <p>1 TB Storage</p>
+      <hr noshade>
+      <p>5 Users Allowed</p>
+      <hr noshade>
+      <p>Send up to 10 GB</p>
+      <hr noshade>
+      <button class="button-professional" type="button" name="button">Learn More</button>
+    </div>
+
+    <div class="master">
+      <h3>Master</h3><br>
+      <span class="price monthly-price2" id="monthly-price2">&dollar;39.99</span><br>
+      <span class="price annually-price2" id="annually-price2">&dollar;399.99</span><br>
+      <hr noshade>
+      <p>2 TB Storage</p>
+      <hr noshade>
+      <p>10 Users Allowed</p>
+      <hr noshade>
+      <p>Send up to 20 GB</p>
+      <hr noshade>
+      <button class="button" type="button" name="button">Learn More</button>
+    </div>
+  </div>
+
+
+  <!--
+  &dollar;199.99
+  500 GB Storage
+  2 Users Allowed
+  Send up to 3 GB
+  Learn More
+
+  Professional
+  &dollar;24.99
+  &dollar;249.99
+  1 TB Storage
+  5 Users Allowed
+  Send up to 10 GB
+  Learn More
+
+  Master
+  &dollar;39.99
+  &dollar;399.99
+  2 TB Storage
+  10 Users Allowed
+  Send up to 20 GB
+  Learn More -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">iCalkeyy</a>.
+  </div>
+
+</body>
+
+</html>
